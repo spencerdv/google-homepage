@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<style>
+    .head-grid-container {
+        display: grid;
+        grid-row-start: 1;
+        grid-row-end: 7;
+        grid-template-columns: 50px 50px 80% 50px 50px 40px 40px;
+        justify-items: center;
+    }
+
+    .body-grid-container{
+        display:grid;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-content: end;
+    }
+
+    #rcorner {
+        border-radius: 100px;
+        height: 40px;
+        width: 40px;
+    }
+</style>
+
+<html>
+    <head>
+        <title>google</title>
+    </head>
+
+    <body>
+        <div class="head-grid-container">
+            <div>About</div>
+            <div>Store</div>
+            <div></div>
+            <div >Gmail</div>
+            <div>Images</div>
+            <img height=30px src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAIVBMVEX///8AAAD09PTMzMyTk5PJycmQkJDl5eWWlpb6+vrOzs4U/fPXAAABRklEQVR4nO3cQW6DMBBAUQrYGO5/4HY/SRlZhCL3vf1E+bCKY3uaAAAAAAAAAACepdT1XNvD3JaZq1uY21tmrlxYWL8y5vhkUnPxm86puXph4dpZuKTmls7CplChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKhylcLyxsnYVHau7oLLzyHe5zxovBj87FvR8AAADA77aynIuLEdOcmSsvfuQnxpYSz2n0c97iXaHVRIUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUeH/h+P/j374X47h7LwYAAAD8D+PfqdB7L0ZuJeoJ92I8c63tyrtNnlk4/jtUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChwk8Ujn/eotR2am1xb8SWmGs1npvYfz7tfC4+GQAAAAAAAACAv/UNuK1EHCwGtosAAAAASUVORK5CYII=" alt="Apps">
+            <img id=rcorner src="https://lh3.googleusercontent.com/ogw/ADGmqu8Ae8JlmlKbI-UvDZfO7WOU8mo5ddMKXB9G3Hg4sg=s64-c-mo" alt="S">
+        </div>
+        <br>
+        <br>
+        <br>
+        <body-grid-container>
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png", alt="I'm Google" width="300"></img>
+            <br>
+            <form>
+                <label for="search"></label>
+                <input type="text" id="search" name="search">
+            </form>
+        </body-grid-container>  
+        <br>
+        <button name="Google Search" type:"button">Google Search</button>
+        <button name="I'm Feeling Lucky" type:"button">I'm Feeling Lucky</button>
+    </body>
+</html>
