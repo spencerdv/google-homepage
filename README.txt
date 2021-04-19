@@ -1,0 +1,1 @@
+This project creates a copy of google's homepage. This will demonstrate the use of HTML and CCS and the positioning of HTML elements.
