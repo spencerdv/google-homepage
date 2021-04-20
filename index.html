@@ -1,55 +1,107 @@
 <!DOCTYPE html>
 <style>
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    article{
+        min-height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "header header header"
+            "body body body"
+            "footer footer footer";
+        font-family: arial,sans-serif;
+    }
     .head-grid-container {
         display: grid;
-        grid-row-start: 1;
-        grid-row-end: 7;
-        grid-template-columns: 50px 50px 80% 50px 50px 40px 40px;
+        grid-area: header;
+        height: 40px;
+        grid-template-columns: 100px 100px 60% 100px 100px 100px 50px;
         justify-items: center;
+        align-items: center;
     }
 
     .body-grid-container{
         display:grid;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        justify-content: end;
+        grid-area: body;
+        justify-content: center;
+        align-self: center;
     }
 
-    #rcorner {
+    .button-grid-container{
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .foot-grid-container {
+        display: grid;
+        grid-area: footer;
+        height: 50px;
+        background-color: lightgrey;
+        grid-template-columns: 100px 100px 1fr 100px 100px 100px;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+            }
+
+    .rcorner {
         border-radius: 100px;
         height: 40px;
         width: 40px;
     }
+
+    .center-text {
+        display: grid;
+        align-content: center;
+        grid-area: body;
+    }
+
 </style>
 
 <html>
     <head>
-        <title>google</title>
+        <title>Google Copycat</title>
     </head>
 
-    <body>
-        <div class="head-grid-container">
-            <div>About</div>
-            <div>Store</div>
-            <div></div>
-            <div >Gmail</div>
-            <div>Images</div>
-            <img height=30px src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAIVBMVEX///8AAAD09PTMzMyTk5PJycmQkJDl5eWWlpb6+vrOzs4U/fPXAAABRklEQVR4nO3cQW6DMBBAUQrYGO5/4HY/SRlZhCL3vf1E+bCKY3uaAAAAAAAAAACepdT1XNvD3JaZq1uY21tmrlxYWL8y5vhkUnPxm86puXph4dpZuKTmls7CplChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKhylcLyxsnYVHau7oLLzyHe5zxovBj87FvR8AAADA77aynIuLEdOcmSsvfuQnxpYSz2n0c97iXaHVRIUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUeH/h+P/j374X47h7LwYAAAD8D+PfqdB7L0ZuJeoJ92I8c63tyrtNnlk4/jtUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChwk8Ujn/eotR2am1xb8SWmGs1npvYfz7tfC4+GQAAAAAAAACAv/UNuK1EHCwGtosAAAAASUVORK5CYII=" alt="Apps">
-            <img id=rcorner src="https://lh3.googleusercontent.com/ogw/ADGmqu8Ae8JlmlKbI-UvDZfO7WOU8mo5ddMKXB9G3Hg4sg=s64-c-mo" alt="S">
-        </div>
-        <br>
-        <br>
-        <br>
-        <body-grid-container>
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png", alt="I'm Google" width="300"></img>
-            <br>
-            <form>
-                <label for="search"></label>
-                <input type="text" id="search" name="search">
-            </form>
-        </body-grid-container>  
-        <br>
-        <button name="Google Search" type:"button">Google Search</button>
-        <button name="I'm Feeling Lucky" type:"button">I'm Feeling Lucky</button>
-    </body>
+    <article>
+            <div class="head-grid-container">
+                <div>About</div>
+                <div>Store</div>
+                <div></div>
+                <div>Gmail</div>
+                <div>Images</div>
+                <img height=30px src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAIVBMVEX///8AAAD09PTMzMyTk5PJycmQkJDl5eWWlpb6+vrOzs4U/fPXAAABRklEQVR4nO3cQW6DMBBAUQrYGO5/4HY/SRlZhCL3vf1E+bCKY3uaAAAAAAAAAACepdT1XNvD3JaZq1uY21tmrlxYWL8y5vhkUnPxm86puXph4dpZuKTmls7CplChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKhylcLyxsnYVHau7oLLzyHe5zxovBj87FvR8AAADA77aynIuLEdOcmSsvfuQnxpYSz2n0c97iXaHVRIUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUeH/h+P/j374X47h7LwYAAAD8D+PfqdB7L0ZuJeoJ92I8c63tyrtNnlk4/jtUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChwk8Ujn/eotR2am1xb8SWmGs1npvYfz7tfC4+GQAAAAAAAACAv/UNuK1EHCwGtosAAAAASUVORK5CYII=" alt="Apps">
+                <img class=rcorner src="https://lh3.googleusercontent.com/ogw/ADGmqu8Ae8JlmlKbI-UvDZfO7WOU8mo5ddMKXB9G3Hg4sg=s64-c-mo" alt="S">
+            </div>
+            <div class="body-grid-container">
+                <div>
+                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png", alt="I'm Google" width="270"></img>
+                    <br>
+                    <form>
+                        <label for="search"></label>
+                        <input size="45px" type="text" id="search" name="search">
+                    </form>
+                </div>     
+                <br>       
+                <div class="button-grid-container">
+                        <button name="Google Search" type:"button">Google Search</button> 
+                        <button name="I'm Feeling Lucky" type:"button">I'm Feeling Lucky</button>
+                </div>
+                <div>
+                    <p class="center-text">Everyone ages 16 and up can get the COVID-19 vaccine. <a href="https://www.google.com/url?q=https://www.google.com/search%3Fq%3Dcovid%2Bvaccine%2Bnear%2Bme&source=hpp&id=19023977&ct=3&usg=AFQjCNFx0Jc9kzbyW7ZNq452mO6OF8fGjA&sa=X&ved=0ahUKEwjK_qbX-4rwAhVBHqwKHawZCPwQ8IcBCBA">Find a vaccination site near you</a></p>
+                </div>
+            </div>
+            <div class="foot-grid-container">
+                <div>Advertsing</div>
+                <div>Business </div>
+                <div>Carbon Neutral Since 2007</div>
+                <div>Privacy</div>
+                <div>Terms</div>
+                <div>Settings</div>
+            </div>
+    </article>
 </html>
